@@ -15,7 +15,7 @@ jobs:
              sleep 100
 
   job2:
-    neds: job1
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - name: Run job2
