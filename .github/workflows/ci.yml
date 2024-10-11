@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run job1
+        run: echo "Running job1"
+             sleep 100
+
+  job2:
+    neds: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run job2
+        run: echo "Running job2"
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run job3
+        run: echo "Running job3"
